@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+    <!--Used for the icon on the tab-->
+        <link rel="apple-touch-icon" sizes="180x180" href="IMG & VIDS/Tab Icon/>
+        <link rel="icon" type="image/png" sizes="32x32" href="IMG & VIDS/Tab Icon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="IMG & VIDS/Tab Icon/favicon-16x16.png">
+        <link rel="manifest" href="IMG & VIDS/Tab Icon/site.webmanifest">
+        <link rel="mask-icon" href="IMG & VIDS/Tab Icon/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
+    <!--Used for the icon on the tab-->
+    <title>Time</title>
+</head>
+<body onload="mainClock()">
+    <div class="fixed-bar">
+        <nav class="main-header">
+            <a href="#"><img src="IMG & Vids/Icons/Time Logo.png" alt=""></a>
+            <img src="IMG & Vids/Icons/Menu.svg" onclick="toggleNav()" class="menuImage">
+        </nav>
+    </div>
+
+    <div class="main-nav nav-in-anim">
+        <div class="fixed-bar-two">
+            <nav class="sub-header">
+                <img src="IMG & VIDS/Icons/Time Logo White.png" alt="">
+                <img src="IMG & VIDS/Icons/Exit White.svg" onclick="toggleNav()" class="menuImage">
+            </nav>
+        </div>
+        <div class="full-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li>
+                    <a href="#Workshops">Workshop</a>
+                    <div class="drop-down" id="arrow-drop-down" onclick="toggleDrop(1)"></div>
+                    <ul id="dropdown-menu-one">
+                        <li><a href="Dry Run Page/index.html">Dry-Run Workshop</a></li>
+                        <li><a href="#" onclick="Alert()">Final Workshop</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" onclick="Alert()">About</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <section class="section-one section-auto">
+        <h1 class="title">Welcome!</h1>
+        <div class="clock-container">
+            <h1 id="clock"></h1>
+        </div>
+    </section>
+
+    <section class="section-two section-auto">
+        <div class="content-one">
+            <h1>We are TIME.</h1>
+            <p>We conduct online workshops to help you manage your time and/or improve your time management skills.</p>
+        </div>
+        <div class="content-two"></div>
+    </section>
+
+    <section class="section-three section-auto" id="Workshops">
+        <img src="IMG & VIDS/Icons/Arrow Left.svg" alt="" class="move-arrow" id="arrow-left" onclick="leftPress()">
+        <div class="cards fade-anim active">
+            <div class="content">
+                <h1>Dry-Run Workshop</h1>
+                <p>Contains the recording, findings, and results of our Dry-Run Workshop.</p>
+                <a href="Dry Run Page/index.html"><button>Learn More</button></a>
+            </div>
+        </div>
+        <div class="cards fade-anim" id="workshops">
+            <div class="content">
+                <h1>Final Workshop</h1>
+                <p>Coming Soon!</p>
+                <a href="#workshops" onclick="Alert()"><button>Learn More</button></a>
+            </div>
+        </div>
+        <img src="IMG & VIDS/Icons/Arrow Left.svg" alt="" class="move-arrow" id="arrow-right" onclick="rightPress()">
+    </section>
+</body>
+
+<script>
+    function Alert() {
+        alert("Coming Soon");
+    }
+</script>
+<script src="JS/toggle.js"></script>
+<script src="JS/time.js"></script>
+<script src="JS/carousel.js"></script>
+
+</html>

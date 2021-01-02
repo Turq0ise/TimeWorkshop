@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <!--Used for the icon on the tab-->
+        <link rel="apple-touch-icon" sizes="180x180" href="../IMG & VIDS/Tab Icon/>
+        <link rel="icon" type="image/png" sizes="32x32" href="../IMG & VIDS/Tab Icon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../IMG & VIDS/Tab Icon/favicon-16x16.png">
+        <link rel="manifest" href="../IMG & VIDS/Tab Icon/site.webmanifest">
+        <link rel="mask-icon" href="../IMG & VIDS/Tab Icon/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
+    <!--Used for the icon on the tab-->
+    <title>Time -- Dry Run Workshop</title>
+</head>
+<body onload="mainClock()" id="page-two">
+    <div class="fixed-bar">
+        <nav class="main-header">
+            <a href="../index.html"><img src="../IMG & Vids/Icons/Time Logo.png" alt=""></a>
+            <img src="../IMG & Vids/Icons/Menu.svg" onclick="toggleNav()" class="menuImage">
+        </nav>
+    </div>
+
+    <div class="main-nav nav-in-anim">
+        <div class="fixed-bar-two">
+            <nav class="sub-header">
+                <img src="../IMG & VIDS/Icons/Time Logo White.png" alt="">
+                <img src="../IMG & VIDS/Icons/Exit White.svg" onclick="toggleNav()" class="menuImage">
+            </nav>
+        </div>
+        <div class="full-nav">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li>
+                    <a href="../index.html#Workshops">Workshop</a>
+                    <div class="drop-down" id="arrow-drop-down" onclick="toggleDrop(1)"></div>
+                    <ul id="dropdown-menu-one">
+                        <li><a href="../Dry Run Page/index.html">Dry-Run Workshop</a></li>
+                        <li><a href="#" onclick="Alert()">Final Workshop</a></li>
+                    </ul>
+                </li>
+                <li><a href="">About</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <section class="section-one section-auto">
+        <h1 class="title">Dry Run Workshop</h1>
+        <div class="clock-container">
+            <h1 id="clock"></h1>
+        </div>
+    </section>
+
+    <section class="section-two section-auto">
+        <div class="side-nav">
+            <ul>
+                <li>
+                    <div class="drop-down" id="plus-drop-down" onclick="toggleDrop(2)"></div>
+                    <a href="#Response-Section">Usability Responses</a>
+                    <ul id="sub-items">
+                        <li><a href="#Usability">Usability Responses</a></li>
+                        <li><a href="#Questions">Responses regarding questions.</a></li>
+                        <li><a href="#Experience">Participants' Experience</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="drop-down" id="plus-drop-down-two" onclick="toggleDrop(3)"></div>
+                    <a href="#Recording-Section">Recording</a>
+                    <ul id="sub-items-two">
+                        <li><a href="#Video-Recording">Video Recording</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <section class="main-content">
+            <section class="sub-section">
+                <h1 id="Usability">Usability Responses</h1>
+                <div conclick="alert()"lass="sub-content">
+                    <h1>What is time management to you?</h1>
+                    <p>Time management is about doing your task perfectly at a short amount of time.</p>
+                </div>
+                <div class="sub-content">
+                    <h1>Is time management useful in your day to day life? Why?</h1>
+                    <p>Yes, because it helps me know what to do and organizes it to mitigate the stress and finish the tasks efficiently.</p>
+                </div>
+                <div class="sub-content">
+                    <h1>Do you want a game like activity in our workshop?</h1>
+                    <div id="donutchart-one" class="charts"></div>
+                </div>
+                <div class="sub-content">
+                    <h1>How many game like activities do you want in our workshop?</h1>
+                    <div id="barchart-one" class="charts"></div>
+                </div>
+                <h2 id="Questions">Do you want to see these questions in our workshop?</h2>
+                <div class="sub-content">
+                    <h1>How can we do more tasks in less time?</h1>
+                    <div id="donutchart-two" class="charts"></div>
+                </div>
+                <div class="sub-content">
+                    <h1>How can we multitask?</h1>
+                    <div id="donutchart-three" class="charts"></div>
+                </div>
+                <h2 id="Experience">Participants' Experience Questions</h2>
+                <div class="sub-content">
+                    <h1>Do you like our workshop?</h1>
+                    <div id="donutchart-four" class="charts"></div>
+                </div>
+                <div class="sub-content">
+                    <h1>Based on your experience, would you recommend our workshop?</h1>
+                    <div id="donutchart-five" class="charts"></div>
+                </div>
+                <div class="sub-content">
+                    <h1>What can we do to improve our workshop?</h1>
+                    <p>A presentation and visuals will make it better. Giving the presenter more time to study so this will reduce the dead air.</p>
+                </div>
+                <div class="sub-content">
+                    <h1>If we implement these improvements will you recommend it?</h1>
+                    <div id="donutchart-six" class="charts"></div>
+                </div>
+            </section>
+            <section class="sub-section">
+                <h1 id="Recording-Section">Recording</h1>
+                <div class="sub-content">
+                    <video src="" controls id="Video-Recording"></video>
+                    <p>Note: The video above might not be the recording itself and might be unrelated.</p>
+                </div>
+            </section>   
+        </section>
+    </section>
+</body>
+
+<script>
+    function Alert() {
+        alert("Comming Soon");
+    }
+</script>
+<script src="../JS/toggle.js"></script>
+<script src="../JS/time.js"></script>
+<script src="../JS/carousel.js"></script>
+<script src="https://www.gstatic.com/charts/loader.js"></script>
+<script src="../JS/charts.js"></script>
+
+</html>

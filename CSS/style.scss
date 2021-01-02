@@ -1,0 +1,474 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+.fixed-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    border-bottom: 2px black solid;
+    visibility: visible;
+    z-index: 100;
+
+    .main-header {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 13px;
+    
+        img {
+            height: 35px;
+            cursor: pointer;
+        }
+    }
+}
+
+.main-nav {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.93);
+    display: none;
+    z-index: 100;
+
+    .fixed-bar-two {
+        position: fixed;
+        top: 0;
+        left: 0;
+        margin: auto;
+        width: 100%;
+    
+        .sub-header {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 13px;
+        
+            img {
+                height: 35px;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .full-nav {
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        ul {
+            padding: 0 13px;
+            
+            li {
+                list-style: none;
+    
+                a {
+                    color: white;
+                    font-size: clamp(40px, 13vw, 85px);
+                    font-weight: 600;
+                    text-decoration: none;
+                }
+
+                #arrow-drop-down {
+                    height: clamp(15px, 15vw, 33px);
+                    background-image: url("../IMG & VIDS/Icons/Arrow Down White.svg");
+                    width: clamp(15px, 15vw, 33px);
+                    background-size: 90%;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                }
+
+                #dropdown-menu-one {
+                    padding-left: 3.25em;
+                    display: none;
+
+                    li {
+                        a {
+                            font-size: clamp(20px, 13vw, 65px);
+                            font-weight: 400;
+                            font-style: italic;
+                        }
+                    }
+
+                    li::before {
+                        content: "\2022";
+                        color: white;
+                        font-size: 55px;
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.drop-down {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.section-auto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.section-one {
+    margin: 0 13px;
+    height: 100vh;
+    text-align: center;
+
+    .title {
+        margin-top: 0.4em;
+        font-size: clamp(33px, 13vw, 90px);
+    }
+
+    .clock-container {
+        width: fit-content;
+        text-align: center;
+        outline: black 5px solid;
+        padding: 15px;
+        margin: 1.5em auto;
+
+        #clock{  
+            font-size: clamp(35px, 13vw, 85px);
+            font-weight: 400;
+            font-style: italic;
+        }
+    }
+}
+
+.section-two {
+    color: white;
+    background-color: black;
+    height: fit-content;
+    padding: 35px 13px;
+    flex-direction: column;
+
+    .content-one {
+        width: fit-content;
+        margin-top: 36px;
+
+        h1 {
+            font-size: clamp(33px, 13vw, 90px);
+        }
+
+        p {
+            font-size: clamp(20px, 10vw, 35px);
+        }
+    }
+
+    .content-two {
+        margin-top: 10px;
+        width: 100%;
+        height: 200px;
+        background-image: url("../IMG & VIDS/Stock/online meeting.png");
+        background-size: 90%;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+.section-three {
+    color: black;
+    background-color: white;
+    height: fit-content;
+    padding: 40px 13px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    img {
+        cursor: pointer;
+    }
+    
+    .cards {
+        color: white;
+        background-color: black;
+        width: 380px;
+        height: fit-content;
+        display: none;
+        border-radius: 10px;
+
+        .content {
+            padding: 30px 10px;
+            height: 505px;
+            text-align: center;
+
+            h1 {
+                padding: 30px 0;
+                font-size: clamp(20px, 13vw, 50px);
+            }
+    
+            p {
+                height: 210px;
+                text-align: start;
+                font-size: clamp(10px, 10vw, 20px);
+                padding: 0 10px 15px 10px;
+            }
+    
+            a {
+                text-decoration: none;
+    
+                button {
+                    color: white;
+                    background-color: black;
+                    border: white 2px solid;
+                    border-radius: 10px;
+                    margin: 20px 0;
+                    padding: 10px 15px;
+                    font-style: italic;
+                    font-size: clamp(8px, 10vw, 15px);
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    .active {
+        display: inline;
+    }
+
+    .move-arrow {
+        height: 50px;
+        margin: 0 50px;
+        display: none;
+    }
+
+    #arrow-right {
+        transform: scaleX(-1);
+    }
+}
+
+#page-two {
+    .section-one {
+        margin: 50px 0 0 0;
+        padding: 0 13px;
+        height: fit-content;
+        text-align: center;
+        border-bottom: black 5px solid;
+    
+        .title {
+            font-size: clamp(33px, 13vw, 85px);
+        }
+    
+        .clock-container {
+            display: none;
+        }
+    }
+
+    .section-two {
+        color: black;
+        background-color: white;
+
+        .side-nav {
+            width: 100%;
+            line-height: 35px;
+            margin-bottom: 20px;
+
+            ul {
+                li {
+                    list-style: none;
+
+                    a {
+                        color: black;
+                        text-decoration: none;
+                        font-size: clamp(15px, 12vw, 20px);
+                        font-weight: 600;
+                    }
+                }
+            }
+
+            #plus-drop-down,
+            #plus-drop-down-two {
+                height: clamp(15px, 12vw, 20px);
+                background-image: url("../IMG & VIDS/Icons/Plus.svg");
+                width: clamp(15px, 12vw, 20px);
+                background-size: 90%;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+
+            #sub-items,
+            #sub-items-two {
+                font-style: italic;
+                margin-left: 25px;
+                display: none;
+
+                a {
+                    font-weight: 400;
+                    font-size: clamp(14px, 12vw, 16px);
+                }
+            }
+        }
+
+        .main-content {
+            .sub-section {
+                margin-bottom: 15px;
+                
+                h1 {
+                    font-size: clamp(20px, 12vw, 38px);
+                    margin-bottom: 10px;
+                }
+
+                .sub-content {
+                    margin-bottom: 30px;
+    
+                    h1 {
+                        font-size: clamp(16px, 12vw, 28px);
+                        font-weight: 450;
+                    }
+    
+                    p {
+                        font-size: clamp(10px, 12vw, 18px);
+                    }
+
+                    .charts,
+                    video {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Responsiveness */
+@media(min-width: 1100px) {
+    .fixed-bar {
+        .main-header {
+            padding: 13px 88px;
+        }
+    }
+
+    .main-nav {
+        .fixed-bar-two {
+            .sub-header {
+                padding: 13px 88px;
+            }
+        }
+
+        .full-nav {
+            ul {
+                padding: 13px 88px;
+            }
+        }
+    }
+
+    .section-two {
+        padding: 65px 88px;
+        flex-direction: row;
+
+        .content-one {
+            margin: 36px 0;
+        }
+
+        .content-two {
+            margin: 36px 0;
+            width: 60%;
+            height: auto;
+            background-size: 75%;
+        }
+    }
+
+    .section-three {
+        padding: 40px 88px;
+        
+        .move-arrow {
+            display: inline;
+        }
+    }
+
+    #page-two {
+        .section-one {
+            margin: 0;
+            padding: 0 88px;
+            flex-direction: row;
+        
+            .title {
+                margin-top: 1em;
+                text-align: start;
+            }
+        
+            .clock-container {
+                display: block;
+                width: fit-content;
+                height: fit-content;
+                text-align: center;
+                padding: 15px;
+                margin: 7.5em auto auto auto;
+        
+                #clock{  
+                    font-size: clamp(30px, 13vw, 80px);
+                    font-weight: 400;
+                    font-style: italic;
+                }
+            }
+        }
+
+        .section-two {
+            .side-nav {
+                width: 450px;
+            }
+
+            .charts,
+            video {
+                width: 750px;
+            }
+        }
+    }
+}
+
+/* Animations */
+.fade-anim {
+    animation-name: fade;
+    animation-duration: 1.3s;
+
+    @keyframes fade {
+        from {
+            opacity: 0.4;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+}
+
+.nav-in-anim {
+    animation-name: in;
+    animation-duration: 1s;
+
+    @keyframes in {
+        from {
+            opacity: 0.6;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+}
+
+.invert-anim {
+    animation-name: invert;
+    animation-duration: 0.5s;
+
+    @keyframes invert {
+        from {
+            transform: scaleY(1);
+        }
+        to {
+            transform: scaleY(-1);
+        }
+    }
+}
